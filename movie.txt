@@ -8,3 +8,4 @@ name:g kissCount:90 kickCount:18
 name:h kissCount:30 kickCount:18
 name:i kissCount:40 kickCount:50
 name:j kissCount:40 kickCount:100
+name:k kissCount:70 kickCount:100
