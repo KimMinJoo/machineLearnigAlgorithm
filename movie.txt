@@ -1,0 +1,10 @@
+name:a kissCount:104 kickCount:3 genre:Romance
+name:b kissCount:100 kickCount:2 genre:Romance
+name:c kissCount:81 kickCount:1 genre:Romance
+name:d kissCount:10 kickCount:101 genre:Action
+name:e kissCount:5 kickCount:99 genre:Action
+name:f kissCount:2 kickCount:98 genre:Action
+name:g kissCount:90 kickCount:18
+name:h kissCount:30 kickCount:18
+name:i kissCount:40 kickCount:50
+name:j kissCount:40 kickCount:100
