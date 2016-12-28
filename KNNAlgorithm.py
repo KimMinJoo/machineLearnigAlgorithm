@@ -65,19 +65,19 @@ def getMovieGenreBykNN(movie, movieList):
             distanceList.pop(maxIndex)
             genreList.append(otherMovie.genre)
             distanceList.append(distance)
-    print(genreList)
     genreSet = set(genreList)
     resultGenre = ""
-    maxCount = 0;
+    maxCount = 0
     for genre in genreSet:
         count = genreList.count(genre)
         if maxCount < count:
-            resultGenre = genre;
+            resultGenre = genre
+            maxCount = count
     return resultGenre
 
 k = 3
-movieFile = open("movie.txt", "r");
-line = movieFile.readline();
+movieFile = open("movie.txt", "r")
+line = movieFile.readline()
 
 movieList = list()
 
@@ -85,9 +85,8 @@ while line :
     movie = getMovieFromLine(line)
     if movie.genre == "" :
         movie.genre = getMovieGenreBykNN(movie, movieList)
-        print(movie)
     movieList.append(movie)
-    line = movieFile.readline();
+    line = movieFile.readline()
 print("finish")
 for movie in movieList:
     print(movie)
