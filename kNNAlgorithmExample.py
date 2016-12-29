@@ -40,6 +40,20 @@ def autoNormaliztionFunc(dataSet):
     normaliztionDataSet = normaliztionDataSet / tile(range, (m,1))
     return normaliztionDataSet
 
+def datingClassTest():
+    hoRatio = 0.10
+    datingDataMat ,datingLabels = file2matrix('datingTestSet2.txt', 3)
+    datingDataMat = autoNormaliztionFunc(datingDataMat)
+    m= datingDataMat.shape[0]
+    numTestVecs = int(m * hoRatio)
+    errorCount = 0.0
+    for i in range(numTestVecs):
+     classifierResult = bookkNNAlgorithm.kNNAlgorithm(datingDataMat[i, :], datingDataMat[numTestVecs:m, :], datingLabels[numTestVecs:m], 3)
+     if (classifierResult != datingLabels[i]):
+         print("the classifier came back with : %d, the real answer is: %d"%(classifierResult, datingLabels[i]))
+         errorCount += 1.0
+    print("the total error rate is %f"% (errorCount/float(numTestVecs)))
+
 datingDataMat, datingLabels = file2matrix('datingTestSet2.txt', 3)
 print("정규화 전")
 print(datingDataMat)
@@ -56,3 +70,5 @@ ax = fig.add_subplot(111)
 #(y축, x축 크기, 색(각 점마다 색을 주기위해 배열)
 ax.scatter(datingDataMat[:, 1], datingDataMat[:, 2], 30.0*array(datingLabels), array(datingLabels))
 plt.show()
+
+datingClassTest()
