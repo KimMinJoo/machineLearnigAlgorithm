@@ -13,7 +13,6 @@ def kNNAlgorithm(inX, dataSet, labels, k):
     diffMat = tile(inX, (dataSetSize, 1)) - dataSet
     #거리를 구하기위해 제곱을 한다.
     sqDiffMat = diffMat ** 2
-    print(sqDiffMat)
     #axis = 0은 행  1은 열을 의미함. 행별로 더하는게 아니라 열별로 더한다.
     sqDistances = sqDiffMat.sum(axis = 1)
     #루트를 씌워 최종 거리를 구한다.

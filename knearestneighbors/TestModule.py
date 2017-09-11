@@ -1,4 +1,4 @@
-import bookkNNAlgorithm
+from knearestneighbors import bookkNNAlgorithm
 
 group, labels = bookkNNAlgorithm.createDataSet()
 
