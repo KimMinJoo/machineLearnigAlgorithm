@@ -143,30 +143,27 @@ print(datingDataMat)
 
 
 #정규화!
-'''
-datingDataMat = autoNormalizationFunc(datingDataMat)
-print("정규화 후")
-print(datingDataMat)
-'''
+# datingDataMat = autoNormalizationFunc(datingDataMat)
+# print("정규화 후")
+# print(datingDataMat)
+
 
 
 #데이터 분석!
-'''
-fig = plt.figure()
-#figure의 구분값( 1 1 1 의 경우 1x1의 첫번째  212 의 경우 2x1의 두번째.....)
-ax = fig.add_subplot(221)
-ax.set(title='mileage and video game', xlabel='mileage', ylabel='video game')
-#(y축, x축 크기, 색(각 점마다 색을 주기위해 배열)
-#연간 항송 마일리지에 비례한 비디오 게임으로 보내는 시간의 비율
-ax.scatter(datingDataMat[:, 0], datingDataMat[:, 1], 30.0*array(datingLabels), array(datingLabels))
-ax2 = fig.add_subplot(222)
-ax2.set(title='video game and ice cream', xlabel='video game', ylabel='ice cream')
-ax2.scatter(datingDataMat[:, 1], datingDataMat[:, 2], 30.0*array(datingLabels), array(datingLabels))
-ax3 = fig.add_subplot(223)
-ax3.set(title='mileage and ice cream', xlabel='mileage', ylabel='ice cream')
-ax3.scatter(datingDataMat[:, 0], datingDataMat[:, 2], 30.0*array(datingLabels), array(datingLabels))
-plt.show()
-'''
+# fig = plt.figure()
+# #figure의 구분값( 1 1 1 의 경우 1x1의 첫번째  212 의 경우 2x1의 두번째.....)
+# ax = fig.add_subplot(221)
+# ax.set(title='mileage and video game', xlabel='mileage', ylabel='video game')
+# #(y축, x축 크기, 색(각 점마다 색을 주기위해 배열)
+# #연간 항송 마일리지에 비례한 비디오 게임으로 보내는 시간의 비율
+# ax.scatter(datingDataMat[:, 0], datingDataMat[:, 1], 30.0*array(datingLabels), array(datingLabels))
+# ax2 = fig.add_subplot(222)
+# ax2.set(title='video game and ice cream', xlabel='video game', ylabel='ice cream')
+# ax2.scatter(datingDataMat[:, 1], datingDataMat[:, 2], 30.0*array(datingLabels), array(datingLabels))
+# ax3 = fig.add_subplot(223)
+# ax3.set(title='mileage and ice cream', xlabel='mileage', ylabel='ice cream')
+# ax3.scatter(datingDataMat[:, 0], datingDataMat[:, 2], 30.0*array(datingLabels), array(datingLabels))
+# plt.show()
 
 
 #데이터 테스트!
