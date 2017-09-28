@@ -5,3 +5,4 @@ __pycache__/
 digits/
 virEnv/
 *.iml
+/naivebayes/data.txt
