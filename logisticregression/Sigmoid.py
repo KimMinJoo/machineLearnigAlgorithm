@@ -47,21 +47,21 @@ class Sigmoid:
 
 sigmoid1 = Sigmoid()
 sigmoid1.createSigmoid(-5, 5)
-sigmoid1.view()
+#sigmoid1.view()
 
 sigmoid2 = Sigmoid()
 sigmoid2.createSigmoid(-100, 100)
-sigmoid2.view()
+#sigmoid2.view()
 
 fig = plt.figure()
 
 ax1 = fig.add_subplot(211)
 ax1.set(title='-5~5', xlabel='x', ylabel='value')
-ax1.scatter(sigmoid1.x, sigmoid1.sigmoid)
+ax1.plot(sigmoid1.x, sigmoid1.sigmoid, linewidth = 2.0, linestyle = "-")
 
 ax2 = fig.add_subplot(212)
 ax2.set(title='-100~100', xlabel='x', ylabel='value')
-ax2.scatter(sigmoid2.x, sigmoid2.sigmoid)
+ax2.plot(sigmoid2.x, sigmoid2.sigmoid, linewidth = 2.0, linestyle = "-")
 
 plt.show()
 
