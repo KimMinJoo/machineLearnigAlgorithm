@@ -82,9 +82,13 @@ def stocGradAscent0(dataMatrix, classLabels):
     for i in range(m):
         h = sigmoid(sum(dataMatrix[i] * weights))
         error = classLabels[i] - h
-        weights = weights + alpha * error * dataMatrix[i]
+        weights = weights + alpha * error * asarray(dataMatrix[i])
+
     return weights
 
 dataArr, labelMat = loadDataSet("testSet.txt")
 weights = gradAscent(dataArr, labelMat)
 plotBestFit(weights.getA())
+
+weights2 = stocGradAscent0(dataArr, labelMat)
+plotBestFit(weights2)
